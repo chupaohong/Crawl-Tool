@@ -1,6 +1,8 @@
 import scrapy
 import os
 
+# Use command: "py -m scrapy crawl crawlerSpider" or "scrapy crawl crawlerSpider"
+
 class crawlerspiderSpider(scrapy.Spider):
       name = 'crawlerSpider'
       allowed_domains = ['thanhnien.vn']
@@ -10,7 +12,7 @@ class crawlerspiderSpider(scrapy.Spider):
       # Create target Directory if don't exist
       if not os.path.exists(dir_name):
             os.mkdir(dir_name)
-            print("Directory " , dir_name ,  " Created ")
+            print("Directory " , dir_name ,  " created ")
       else:
             print("Directory " , dir_name ,  " already exists")
 
